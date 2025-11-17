@@ -46,7 +46,7 @@ jobs:
       
       - name: Execute TrueClient Script (with WebDriver Manager)
         run: |
-          python scripts/trueclient_executor.py
+          python scripts/trueclient_executor.py.py
       
       - name: Upload Results Artifact
         if: always()
