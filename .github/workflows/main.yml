@@ -58,11 +58,11 @@ jobs:
             temp/
           retention-days: 30
       
-      - name: Commit Results to Repository
-        if: success()
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add results/
-          git diff --quiet && git diff --staged --quiet || git commit -m "Add TrueClient execution results - $(date +'%Y-%m-%d %H:%M:%S')"
-          git push
+      # - name: Commit Results to Repository
+      #   if: success()
+      #   run: |
+      #     git config --local user.email "action@github.com"
+      #     git config --local user.name "GitHub Action"
+      #     git add results/
+      #     git diff --quiet && git diff --staged --quiet || git commit -m "Add TrueClient execution results - $(date +'%Y-%m-%d %H:%M:%S')"
+      #     git push
